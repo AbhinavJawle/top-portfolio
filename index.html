@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ashley Williams - Portfolio</title>
+    <style>
+      /* Reset and base styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, sans-serif;
+      }
+
+      body {
+        line-height: 1.6;
+        color: #333;
+      }
+
+      /* Header section */
+      .header {
+        background-color: #00a3c4;
+        padding: 2rem 1rem;
+        position: relative;
+        overflow: hidden;
+        min-height: 400px;
+      }
+
+      .header::after {
+        content: "";
+        position: absolute;
+        bottom: -50px;
+        left: 0;
+        right: 0;
+        height: 100px;
+        background: white;
+        transform: skewY(-3deg);
+      }
+
+      .profile-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        position: relative;
+        z-index: 1;
+      }
+
+      .profile-image {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .about-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+      }
+
+      .name {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: white;
+      }
+
+      /* Social icons */
+      .social-icons {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      .social-icons a {
+        color: #333;
+        font-size: 1.5rem;
+        text-decoration: none;
+      }
+
+      /* Work section */
+      .work-section {
+        padding: 4rem 1rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .work-section h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .project-card {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .project-image {
+        width: 100%;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.5rem;
+      }
+
+      .project-info {
+        padding: 1.5rem;
+      }
+
+      .project-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.5rem;
+      }
+
+      .project-links {
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      .project-links a {
+        color: #333;
+        text-decoration: none;
+      }
+
+      /* Contact section */
+      .contact-section {
+        background-color: #00a3c4;
+        padding: 4rem 1rem;
+        color: white;
+      }
+
+      .contact-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .contact-info h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .contact-details {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .contact-image {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      /* Tablet styles */
+      @media (min-width: 768px) {
+        .profile-container {
+          flex-direction: row;
+          align-items: flex-start;
+        }
+
+        .projects-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .contact-container {
+          grid-template-columns: 1fr 1fr;
+          align-items: center;
+        }
+      }
+
+      /* Desktop styles */
+      @media (min-width: 1024px) {
+        .projects-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="profile-container">
+        <img
+          src="./pexels-berobscura-1679175123-29751782.jpg"
+          alt="Ashley Williams"
+          class="profile-image"
+        />
+        <div class="about-content">
+          <h1 class="name">Ashley Williams</h1>
+          <div class="about-card">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur.
+            </p>
+            <div class="social-icons">
+              <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="work-section">
+      <h2>My work</h2>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-image" style="background-color: #c41e3a">
+            screenshot of project
+          </div>
+          <div class="project-info">
+            <div class="project-title">
+              <h3>Project name</h3>
+              <div class="project-links">
+                <a href="#" aria-label="GitHub"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a href="#" aria-label="External link"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+              </div>
+            </div>
+            <p>
+              Short description of the project. Just a couple sentences will do.
+            </p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image" style="background-color: #c41e3a">
+            screenshot of project
+          </div>
+          <div class="project-info">
+            <div class="project-title">
+              <h3>Project name</h3>
+              <div class="project-links">
+                <a href="#" aria-label="GitHub"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a href="#" aria-label="External link"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+              </div>
+            </div>
+            <p>
+              Short description of the project. Just a couple sentences will do.
+            </p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image" style="background-color: #c41e3a">
+            screenshot of project
+          </div>
+          <div class="project-info">
+            <div class="project-title">
+              <h3>Project name</h3>
+              <div class="project-links">
+                <a href="#" aria-label="GitHub"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a href="#" aria-label="External link"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+              </div>
+            </div>
+            <p>
+              Short description of the project. Just a couple sentences will do.
+            </p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image" style="background-color: #c41e3a">
+            screenshot of project
+          </div>
+          <div class="project-info">
+            <div class="project-title">
+              <h3>Project name</h3>
+              <div class="project-links">
+                <a href="#" aria-label="GitHub"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a href="#" aria-label="External link"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+              </div>
+            </div>
+            <p>
+              Short description of the project. Just a couple sentences will do.
+            </p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image" style="background-color: #c41e3a">
+            screenshot of project
+          </div>
+          <div class="project-info">
+            <div class="project-title">
+              <h3>Project name</h3>
+              <div class="project-links">
+                <a href="#" aria-label="GitHub"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a href="#" aria-label="External link"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+              </div>
+            </div>
+            <p>
+              Short description of the project. Just a couple sentences will do.
+            </p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image" style="background-color: #c41e3a">
+            screenshot of project
+          </div>
+          <div class="project-info">
+            <div class="project-title">
+              <h3>Project name</h3>
+              <div class="project-links">
+                <a href="#" aria-label="GitHub"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a href="#" aria-label="External link"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+              </div>
+            </div>
+            <p>
+              Short description of the project. Just a couple sentences will do.
+            </p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image" style="background-color: #c41e3a">
+            screenshot of project
+          </div>
+          <div class="project-info">
+            <div class="project-title">
+              <h3>Project name</h3>
+              <div class="project-links">
+                <a href="#" aria-label="GitHub"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a href="#" aria-label="External link"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+              </div>
+            </div>
+            <p>
+              Short description of the project. Just a couple sentences will do.
+            </p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image" style="background-color: #c41e3a">
+            screenshot of project
+          </div>
+          <div class="project-info">
+            <div class="project-title">
+              <h3>Project name</h3>
+              <div class="project-links">
+                <a href="#" aria-label="GitHub"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a href="#" aria-label="External link"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+              </div>
+            </div>
+            <p>
+              Short description of the project. Just a couple sentences will do.
+            </p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image" style="background-color: #c41e3a">
+            screenshot of project
+          </div>
+          <div class="project-info">
+            <div class="project-title">
+              <h3>Project name</h3>
+              <div class="project-links">
+                <a href="#" aria-label="GitHub"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a href="#" aria-label="External link"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+              </div>
+            </div>
+            <p>
+              Short description of the project. Just a couple sentences will do.
+            </p>
+          </div>
+        </div>
+        <!-- Repeat project card structure for other projects with different background colors -->
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="contact-container">
+        <div class="contact-info">
+          <h2>Contact me</h2>
+          <p>
+            Please get in touch if you think our work could be mutually
+            beneficial!
+          </p>
+          <div class="contact-details">
+            <p>1234 Random Road<br />Random Town, California 12345</p>
+            <p>555-555-5555</p>
+            <p>ashleywilliams.is.not.real@gmail.com</p>
+            <div class="social-icons">
+              <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <img
+          src="./pexels-berobscura-1679175123-29751782.jpg"
+          alt="Ashley Williams working"
+          class="contact-image"
+        />
+      </div>
+    </section>
+  </body>
+</html>
